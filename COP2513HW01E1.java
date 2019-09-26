@@ -1,7 +1,7 @@
 /**
 * This is our COP2513 template
 * Kyle Santiago 9/18/2019
-* Exercise #1 – Role Playing Game Class 
+* Exercise #1 â€“ Role Playing Game Class 
 **/
 import java.util.Scanner; // Scanner is in the java.util package
 public class COP2513HW01E1 {
@@ -65,6 +65,14 @@ public class COP2513HW01E1 {
       this.mana = mana;
    }// end setMana
    
+   private int getLevel(){
+      return level;
+   }// end getLevel
+   
+   private void setLevel(int level){
+      this.level = level;
+   }// end setLevel
+   
    public void gainExperience(double exp){
       double sumExp = experience += exp; 
       if(sumExp > levelup){
@@ -93,8 +101,14 @@ public class COP2513HW01E1 {
    }// end of method
    
    public static void main(String[] args) {
-      COP2513HW01E1 Mitsuki = new COP2513HW01E1("Mitsuki Saiga", "Hero", 1000, 1000, 999, 1, 999);
-      COP2513HW01E1 Anorak = new COP2513HW01E1("Anorak", "Magus", 9999, 9999, 999, 1, 999);      
+      COP2513HW01E1 Mitsuki = new COP2513HW01E1("Mitsuki Saiga", "Hero", 1000, 1000, 999, 1, 5000);
+      COP2513HW01E1 Anorak = new COP2513HW01E1();
+      Anorak.setName("Anorak");    
+      Anorak.setProfession("Magus");
+      Anorak.setHealth(9999);
+      Anorak.setMana(9999);
+      Anorak.setLevel(999);
+      Anorak.getProgress();  
       System.out.println(Mitsuki.toString());
       System.out.println(Anorak.toString());
    }// end of main
