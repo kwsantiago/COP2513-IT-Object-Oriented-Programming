@@ -1,7 +1,7 @@
 /**
 * This is our COP2513 template
 * Kyle Santiago 9/23/2019
-* Exercise #2 – Loan Class 
+* Exercise #2 â€“ Loan Class 
 **/
 import java.util.Scanner; // Scanner is in the java.util package
 public class COP2513HW01E2 {
@@ -28,8 +28,8 @@ public class COP2513HW01E2 {
    double top; 
    double bot; 
    double c;
-      top = loanAmount + interestRate;
-      bot = 1 - (1/Math.pow(1+interestRate,termYears*12));
+      top = loanAmount * (interestRate/12);
+      bot = 1 - (1/Math.pow(1+(interestRate/12),termYears*12));
       c = top / bot;
       return c;
    }// end monthlyPayment
@@ -54,9 +54,9 @@ public class COP2513HW01E2 {
    }// end toString
    
    public static void main(String[] args) {
-      COP2513HW01E2 Loan1 = new COP2513HW01E2("Car", 20000, 3.5, 5);
-      COP2513HW01E2 Loan2 = new COP2513HW01E2("Education", 30000, 5, 10);
-      COP2513HW01E2 Loan3 = new COP2513HW01E2("House Reform", 2000, 2.5, 1.5);
+      COP2513HW01E2 Loan1 = new COP2513HW01E2("Car", 20000, 0.035, 5);
+      COP2513HW01E2 Loan2 = new COP2513HW01E2("Education", 30000, 0.05, 10);
+      COP2513HW01E2 Loan3 = new COP2513HW01E2("House Reform", 2000, 0.025, 1.5);
       System.out.println(Loan1.toString());
       System.out.println(Loan2.toString());
       System.out.println(Loan3.toString());
