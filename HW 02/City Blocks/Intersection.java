@@ -1,7 +1,7 @@
 /**
 * This is our COP2513 template
 * Kyle Santiago 9/26/2019
-* Exercise #4 – City Blocks 
+* Exercise #4 â€“ City Blocks 
 **/
 public class Intersection {
    int street;
@@ -42,6 +42,9 @@ public class Intersection {
    }// end distance
    
    String getSuffix(int n){
+      if(n == 11 || n == 12 || n == 13){
+          return "th";
+      }
       n = n%10;
       if(n == 1){
       return "st";
