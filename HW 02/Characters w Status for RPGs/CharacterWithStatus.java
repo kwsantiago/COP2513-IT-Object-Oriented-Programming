@@ -84,19 +84,19 @@ public class CharacterWithStatus{
       return "It appears fate wants you to live another day"; 
       }
       else if(status == "dead"){
-      return "if appears fate wanted you dead";
+      return "It appears fate wanted you dead";
       }
       else if(status == "poisoned"){
-      return "fate has it that you suffer slowly"; 
+      return "Fate has it that you suffer slowly"; 
       }
       else if(status == "stunned"){
-      return "fate wants you to live in the moment and stand still";
+      return "Fate wants you to live in the moment and stand still";
       }
       else if(status == "sleeping"){
-      return "fate says take a nice rest";
+      return "Fate says take a nice rest";
       }
       else if(status == "half dead"){
-      return "fate has spare your life"; 
+      return "Fate has spare your life"; 
       }
       else{
       return "Test your fate and roll the dice";
