@@ -1,7 +1,7 @@
 /**
 * This is our COP2513 template
 * Kyle Santiago 9/26/2019
-* Exercise #1 – Characters w/ Status for RPGs 
+* Exercise #1 â€“ Characters w/ Status for RPGs 
 **/
 public class CharacterWithStatus{
    String name;
@@ -96,7 +96,7 @@ public class CharacterWithStatus{
       return "Fate says take a nice rest";
       }
       else if(status == "half dead"){
-      return "Fate has spare your life"; 
+      return "Fate has spared your life"; 
       }
       else{
       return "Test your fate and roll the dice";
