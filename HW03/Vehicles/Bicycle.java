@@ -1,8 +1,9 @@
-public class Bicycle{
+public class Bicycle extends Vehicles{
       private double bikeWeight;
       private double cyclistWeight;
       
       Bicycle(double bikeWeight, double cyclistWeight, int numberOfWheels, String brand, double velocity, int nYears) {
+      super(numberOfWheels, brand, velocity, nYears);
       this.bikeWeight = bikeWeight;
       this.cyclistWeight = cyclistWeight;
    }// end of constructor for my values

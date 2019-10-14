@@ -2,6 +2,7 @@ public class Car extends Vehicles{
       private double purchaseAmount;
       
       Car(double purchaseAmount, int numberOfWheels, String brand, double velocity, int nYears) {
+      super(numberOfWheels, brand, velocity, nYears);
       this.purchaseAmount = purchaseAmount;
    }// end of constructor for my values
    
@@ -24,8 +25,6 @@ public class Car extends Vehicles{
       "Vehicle Velocity: " + getVelocity() + "\n" + "Number of wheels: " + getNumberOfWheels() + "\n" +
       "Number of years since purchase: " + getNYears() + "\n" + "Purchase Amount: " +
       purchaseAmount + "\n" + "Depreciation Amount of the vehicle: " + getDepreciationAmount();
-      
-      Results += brakingDistance();
       
       return Results;      
    }// end of method
