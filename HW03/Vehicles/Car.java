@@ -24,7 +24,9 @@ public class Car extends Vehicles{
       String Results = "Vehicle Brand: " + getBrand() + "\n" + 
       "Vehicle Velocity: " + getVelocity() + "\n" + "Number of wheels: " + getNumberOfWheels() + "\n" +
       "Number of years since purchase: " + getNYears() + "\n" + "Purchase Amount: " +
-      purchaseAmount + "\n" + "Depreciation Amount of the vehicle: " + getDepreciationAmount();
+      getPurchaseAmount() + "\n" + "Depreciation Amount of the vehicle: " + getDepreciationAmount();
+      
+      Results += "\n";
       
       return Results;      
    }// end of method

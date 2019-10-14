@@ -55,11 +55,13 @@ public class Vehicles {
    }// end brakingDistance
       
    public String toString() {
-      String Results = "Vehicle Brand: " + brand + "\n" + 
-      "Vehicle Velocity: " + velocity + "\n" + "Number of wheels: " + numberOfWheels + "\n" +
-      "Number of years since purchase: " + nYears + "\n" + "Braking Distance of the vehicle: ";
+      String Results = "Vehicle Brand: " + getBrand() + "\n" + 
+      "Vehicle Velocity: " + getVelocity() + "\n" + "Number of wheels: " + getNumberOfWheels() + "\n" +
+      "Number of years since purchase: " + getNYears() + "\n" + "Braking Distance of the vehicle: ";
       
       Results += brakingDistance();
+      
+      Results += "\n";
       
       return Results;      
    }// end of method

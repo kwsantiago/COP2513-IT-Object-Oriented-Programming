@@ -19,7 +19,9 @@ public class FourFunction extends Adder{
       memory /= a;
    }// end divide
    
-   //overloadhere
+   public void divide(double a){
+      memory2 /= a;
+   }// end divide2
    
    public void clearAll(){
       memory = 0.0;

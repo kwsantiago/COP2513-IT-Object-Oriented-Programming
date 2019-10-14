@@ -60,7 +60,7 @@ public class MobilePlan {
       String Results =  "Class Name: " + "\n" +
       "Created on: " + "\n" + "Type: " + type + "\n" +
       "Minutes: " + minutes + "\n" + "Data: " + data + " GB \n" +
-      "SMS: " + sms + "\n" + "Monthly Bill: " + //getMonthlyBill();
+      "SMS: " + sms + "\n" + "Monthly Bill: " + getMonthlyBill();
       
       return Results;
    }// end of method

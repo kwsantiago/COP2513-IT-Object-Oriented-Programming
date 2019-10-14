@@ -26,22 +26,23 @@ public class Bicycle extends Vehicles{
    
    public double gravitationalForce(){
       double weight = bikeWeight + cyclistWeight;
-      double gf = 9.8067*(sin(arctan(2.4/100)));
+      double gf = 9.8067*(Math.sin(Math.atan(2.4/100)));
       gf = gf * weight; 
       return gf;
    }// end graviationalForce
    
    public String toString() {
-      String Results = "Vehicle Brand: " + brand + "\n" + 
-      "Vehicle Velocity: " + velocity + "\n" + "Number of wheels: " + numberOfWheels + "\n" +
-      "Number of years since purchase: " + nYears + "\n" + "Bike Weight: " +
-      bikeWeight + "\n" + "Cyclist Weight: " + cyclistWeight + "\n" + 
+      String Results = "Vehicle Brand: " + getBrand() + "\n" + 
+      "Vehicle Velocity: " + getVelocity() + "\n" + "Number of wheels: " + getNumberOfWheels() + "\n" +
+      "Number of years since purchase: " + getNYears() + "\n" + "Bike Weight: " +
+      getBikeWeight() + "\n" + "Cyclist Weight: " + getCyclistWeight() + "\n" +
       "Gravitational Force acting on the cyclist: " + gravitationalForce();
       
-      Results += brakingDistance();
+      Results += "\n";
       
       return Results;      
    }// end of method
+
 
    
    }// end class Bicycle 
