@@ -9,7 +9,7 @@ import java.util.Date;
 public class Shape {
    private String color;
    private boolean filled;
-   private date dateCreated = new Date();
+   //private date dateCreated = new Date();
    
    Shape(String color, boolean filled) {
       this.color = color;
@@ -24,7 +24,7 @@ public class Shape {
       this.color = color;
    }// end setColor
    
-   public double getFilled(){
+   public boolean getFilled(){
       return filled;
    }// end getFilled
    
@@ -33,13 +33,8 @@ public class Shape {
    }// end setFilled
       
    public String toString() {
-      return "created on: " + dateCreated + "\n" + 
+      return "created on: " + /*dateCreated +*/ "\n" + 
       "color: " + color + "\n" + "filled: " + filled;
    }// end of method
-   
-   public static void main(String[] args) {
-      Shape character = new Shape();
-      System.out.println(character.toString());
-   }// end of main
 
 }// end of class

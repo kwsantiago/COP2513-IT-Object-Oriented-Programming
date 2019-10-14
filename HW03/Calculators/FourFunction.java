@@ -7,8 +7,9 @@ public class FourFunction extends Adder{
    }// end no-arg
    
    public void switchMemory(){
+      double temp = memory2;
       memory2 = memory;
-      memory = memory2;
+      memory = temp;
    }// end switchMemory
    
    public void multiply(double a){
@@ -19,9 +20,21 @@ public class FourFunction extends Adder{
       memory /= a;
    }// end divide
    
-   public void divide(double a){
-      memory2 /= a;
-   }// end divide2
+   public void multiply(){
+      memory = memory*memory2;
+   }// end no arg multiply
+   
+   public void divide(){
+      memory = memory/memory2;
+   }// end no arg divide
+   
+   public void add(){
+      memory = memory+memory2;
+   }// end no arg add
+   
+   public void subtract(){
+      memory = memory-memory2;
+   }// end no arg subtract
    
    public void clearAll(){
       memory = 0.0;
