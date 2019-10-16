@@ -9,7 +9,7 @@ public class MobilePlan {
    private int minutes;
    private int sms;
    private int data;
-   private Date dateCreated = new Date();
+   private java.util.Date dateCreated;
    private double monthlyBill;
    
    MobilePlan() {
@@ -17,7 +17,7 @@ public class MobilePlan {
       minutes = 0;
       sms = 0;
       data = 0;
-      dateCreated = calendar.getTime();
+      dateCreated = new java.util.Date();
    }// end of constructor for default values
    
    MobilePlan(int minutes, int sms, int data) {
@@ -59,8 +59,8 @@ public class MobilePlan {
    public String toString() {
       String Results =  "Class Name: " + "\n" +
       "Created on: " + "\n" + "Type: " + type + "\n" +
-      "Minutes: " + minutes + "\n" + "Data: " + data + " GB \n" +
-      "SMS: " + sms + "\n" + "Monthly Bill: " + getMonthlyBill();
+      "Minutes: " + getMinutes() + "\n" + "Data: " + getData() + " GB \n" +
+      "SMS: " + getSMS() + "\n" + "Monthly Bill: " + getMonthlyBill();
       
       return Results;
    }// end of method
