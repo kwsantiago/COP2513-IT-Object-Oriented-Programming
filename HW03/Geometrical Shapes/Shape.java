@@ -9,11 +9,12 @@ import java.util.Date;
 public class Shape {
    private String color;
    private boolean filled;
-   //private date dateCreated = new Date();
+   private Date dateCreated;
    
    Shape(String color, boolean filled) {
       this.color = color;
       this.filled = filled;
+      this.dateCreated = new Date();
    }// end of constructor for my values
    
    public String getColor(){
@@ -31,9 +32,13 @@ public class Shape {
    public void setFilled(boolean filled){
       this.filled = filled;
    }// end setFilled
+   
+   public Date getDateCreated(){
+      return dateCreated;
+   }// end getDateCreated
       
    public String toString() {
-      return "created on: " + /*dateCreated +*/ "\n" + 
+      return "created on: " + dateCreated + "\n" + 
       "color: " + color + "\n" + "filled: " + filled;
    }// end of method
 

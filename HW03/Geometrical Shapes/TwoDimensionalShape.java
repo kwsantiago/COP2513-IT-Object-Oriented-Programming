@@ -5,7 +5,7 @@ public class TwoDimensionalShape extends Shape {
    TwoDimensionalShape(String color, boolean filled, double dimension1, double dimension2){
       super(color, filled);
       this.dimension1 = dimension1;
-      this.dimension2 = dimension2;// add 2 more
+      this.dimension2 = dimension2;
    }// end constructor
    
    public double getDimension1(){
@@ -25,10 +25,10 @@ public class TwoDimensionalShape extends Shape {
    }// end setter
    
    public String toString() {
-      return "created on: " + /*dateCreated +*/ "\n" + 
+      return "created on: " + getDateCreated() + "\n" + 
       "color: " + getColor() + "\n" + "filled: " + getFilled() +
-      "shape type: 2-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
-      "dimension2: " + getDimension2() + "\n";
+      "shape type: 2-D" + "\n" + "dimension1: " + dimension1 + "\n" +
+      "dimension2: " + dimension2 + "\n";
    }// end of method
 
 }// end of class
