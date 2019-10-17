@@ -15,16 +15,17 @@ public class Sphere extends ThreeDimensionalShape {
       this.radius = radius;
    }// end setter
    
-   public double getArea(){
-      return Math.PI*(Math.pow(radius,2));
-   }// end getArea
+   public double getVolume(){
+      return (4/3)*Math.PI*radius(Math.pow(radius,3));
+   }// end getVolume
    
    public String toString() {
       return "created on: " + getDateCreated() + "\n" + 
       "color: " + getColor() + "\n" + "filled: " + getFilled() +
-      "shape type: 2-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
-      "dimension2: " + getDimension2() + "\n" + "radius: " + radius + "\n" + 
-      "shape name: circle" + "area: " + getArea();
+      "shape type: 3-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
+      "dimension2: " + getDimension2() + "\n" + +
+      "dimension3: " + getDimension3() + "\n" + "radius: " + radius + "\n" + 
+      "shape name: sphere" + "volume: " + getVolume();
    }// end of method
 
 }// end of class
