@@ -9,7 +9,7 @@ public class MobilePlan {
    private int minutes;
    private int sms;
    private int data;
-   private java.util.Date dateCreated;
+   private Date dateCreated;
    private double monthlyBill;
    
    MobilePlan() {
@@ -17,7 +17,7 @@ public class MobilePlan {
       minutes = 0;
       sms = 0;
       data = 0;
-      dateCreated = new java.util.Date();
+      dateCreated = new Date();
    }// end of constructor for default values
    
    MobilePlan(int minutes, int sms, int data) {
@@ -25,7 +25,7 @@ public class MobilePlan {
       this.sms = sms;
       this.data = data;
       type = "Basic";
-      //dateCreated =
+      this.dateCreated = new Date();
    }// end of constructor for my values
    
    public double getMinutes(){
@@ -52,22 +52,18 @@ public class MobilePlan {
       this.data = data;
    }// end setData
    
-   /*public double getMonthlyBill(){
-      
-   }// end getMonthlyBill */
+   public double getMonthlyBill(){
+      double monthlyBill = (sms*0.005)+(minutes*0.01)+(data*2);
+      return monthlyBill;
+   }// end getMonthlyBill
       
    public String toString() {
       String Results =  "Class Name: " + "\n" +
-      "Created on: " + "\n" + "Type: " + type + "\n" +
-      "Minutes: " + getMinutes() + "\n" + "Data: " + getData() + " GB \n" +
-      "SMS: " + getSMS() + "\n" + "Monthly Bill: " + getMonthlyBill();
+      "Created on: " + dateCreated + "\n" + "Type: " + type + "\n" +
+      "Minutes: " + minutes + "\n" + "Data: " + data + " GB \n" +
+      "SMS: " + sms + "\n" + "Monthly Bill: " + getMonthlyBill() + "\n";
       
       return Results;
    }// end of method
-   
-   public static void main(String[] args) {
-      MobilePlan character = new MobilePlan();
-      System.out.println(character.toString());
-   }// end of main
 
 }// end of class
