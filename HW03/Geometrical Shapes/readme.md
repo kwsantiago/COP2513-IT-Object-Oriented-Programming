@@ -1,0 +1,2 @@
+# Geometrical Shapes 
+Design a class named Shape and its two subclasses named TwoDimensionalShape and ThreeDimensionalShape. Make Circle and Square subclasses of TwoDimensionalShape. Make Sphere and Cube subclasses of ThreeDimensionalShape. 
