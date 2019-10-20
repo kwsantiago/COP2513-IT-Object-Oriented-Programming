@@ -34,7 +34,7 @@ public class Rectangle extends TwoDimensionalShape {
       "color: " + getColor() + "\n" + "filled: " + getFilled() +
       "shape type: 2-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
       "dimension2: " + getDimension2() + "\n" + 
-      "shape name: rectangle" + "area: " + getArea();
+      "shape name: rectangle" + "area: " + getArea() + "\n";
    }// end of method
 
 }// end of class

@@ -39,7 +39,7 @@ public class Shape {
       
    public String toString() {
       return "created on: " + dateCreated + "\n" + 
-      "color: " + color + "\n" + "filled: " + filled;
+      "color: " + color + "\n" + "filled: " + filled + "\n";
    }// end of method
 
 }// end of class

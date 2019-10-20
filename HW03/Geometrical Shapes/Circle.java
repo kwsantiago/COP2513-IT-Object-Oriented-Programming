@@ -24,7 +24,7 @@ public class Circle extends TwoDimensionalShape {
       "color: " + getColor() + "\n" + "filled: " + getFilled() +
       "shape type: 2-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
       "dimension2: " + getDimension2() + "\n" + "radius: " + radius + "\n" + 
-      "shape name: circle" + "area: " + getArea();
+      "shape name: circle" + "area: " + getArea() + "\n";
    }// end of method
 
 }// end of class
