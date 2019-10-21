@@ -8,17 +8,11 @@ public class CharacterMaker {
    private int Health;
    private int Mana;
    
-   CharacterMaker() {
-      Name = "";
-      Health = 0;
-      Mana = 0;
-   }// end of constructor for default values
-   
    CharacterMaker(String Name, int Health, int Mana) {
       this.Name = Name;
       this.Health = Health;
       this.Mana = Mana;
-   }// end of constructor for my values
+   }// end of constructor
    
    public String getName(){
       return Name;
@@ -53,11 +47,5 @@ public class CharacterMaker {
       
       return Results;
    }// end of method
-   
-       
-   public static void main(String[] args) {
-      Player player = new Player();
-      System.out.println(player.toString());
-   }// end of main
 
 }// end of class

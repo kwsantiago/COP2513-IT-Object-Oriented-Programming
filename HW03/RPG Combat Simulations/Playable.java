@@ -6,11 +6,9 @@ public class Playable extends CharacterMaker{
       private int WIS;
       private int CHA;
       
-      /*Playable(String Name, int Health, int Mana) {
-         this.Name = Name;
-         this.Health = Health;
-         this.Mana = Mana;
-      }// end of constructor for my values*/
+      Playable(String Name, int Health, int Mana) {
+         super(Name,Health,Mana);
+      }// end of constructor for my values
       
       public int getSTR(){
       return STR;
@@ -36,6 +34,30 @@ public class Playable extends CharacterMaker{
       return CHA;
       }// end getter
       
+      public void setSTR(int STR){
+      this.STR = STR;
+      }// end setter
+      
+      public void setDEX(int DEX){
+      this.DEX = DEX;
+      }// end setter
+      
+      public void setCON(int CON){
+      this.CON = CON;
+      }// end setter
+      
+      public void setINT(int INT){
+      this.INT = INT;
+      }// end setter
+      
+      public void setWIS(int WIS){
+      this.WIS = WIS;
+      }// end setter
+      
+      public void setCHA(int CHA){
+      this.CHA = CHA;
+      }// end setter
+      
     public int rollStats(){
        int sides = 6;
        int dice = 0;
@@ -47,13 +69,13 @@ public class Playable extends CharacterMaker{
       }// end rollStats
       
       public String toString() {
-      String Results =  "Name " + Name + ". \n" +
-      "Health " + Health + ". \n" + 
-      "Mana " + Mana + ". \n" +
+      String Results =  "Name " + getName() + ". \n" +
+      "Health " + getHealth() + ". \n" + 
+      "Mana " + getMana() + ". \n" +
       "STR: " + STR + ", DEX: " + DEX + ", CON: " + CON +
       ", INT: " + INT + ", WIS: " + WIS + ", CHA: " + CHA;
       
-      //Results += ". \n";
+      Results += ". \n";
       
       return Results;
    }// end of method

@@ -31,7 +31,7 @@ public class Rectangle extends TwoDimensionalShape {
    
    public String toString() {
       return "created on: " + getDateCreated() + "\n" + 
-      "color: " + getColor() + "\n" + "filled: " + getFilled() +
+      "color: " + getColor() + "\n" + "filled: " + getFilled() + "\n" +
       "shape type: 2-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
       "dimension2: " + getDimension2() + "\n" + 
       "shape name: rectangle" + "area: " + getArea() + "\n";

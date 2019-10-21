@@ -21,7 +21,7 @@ public class Cube extends ThreeDimensionalShape {
    
    public String toString() {
       return "created on: " + getDateCreated() + "\n" + 
-      "color: " + getColor() + "\n" + "filled: " + getFilled() +
+      "color: " + getColor() + "\n" + "filled: " + getFilled() + "\n" +
       "shape type: 3-D" + "\n" + "dimension1: " + getDimension1() + "\n" +
       "dimension2: " + getDimension2() + "\n" +
       "dimension3: " + getDimension3() + "\n" + "side: " + side + "\n" + 

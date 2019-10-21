@@ -36,7 +36,7 @@ public class ThreeDimensionalShape extends Shape {
    
    public String toString() {
       return "created on: " + getDateCreated() + "\n" + 
-      "color: " + getColor() + "\n" + "filled: " + getFilled() +
+      "color: " + getColor() + "\n" + "filled: " + getFilled() + "\n" +
       "shape type: 2-D" + "\n" + "dimension1: " + dimension1 + "\n" +
       "dimension2: " + dimension2 + "\n" + "dimension3: " + dimension3;
    }// end of method

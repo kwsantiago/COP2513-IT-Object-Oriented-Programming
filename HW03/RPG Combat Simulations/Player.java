@@ -1,14 +1,12 @@
 public class Player extends Playable{
-         //private String[] skills;
+         private String[] skills;
          private String profession;
          private int level;
          private double currExp;
          private double expRequired;
          
          Player(String Name, int Health, int Mana, String profession, int level, ){
-            this.Name = Name;
-            this.Health = Health;
-            this.Mana = Mana;
+            super(Name,Health,Mana);
             this.profession = profession;
             this.level = level;
             //enter skill here
