@@ -6,7 +6,8 @@ public class NonPlayer extends CharacterMaker{
          private int dmg;
          private int dice;
    
-      NonPlayer(boolean immortal,String role,double exp,int gold,int dice) {
+      NonPlayer(String Name, int Health, int Mana, boolean immortal,String role,double exp,int gold,int dice) {
+         super(Name, Health, Mana);
          this.immortal = immortal;
          this.role = role;
          this.exp = exp;
@@ -14,7 +15,8 @@ public class NonPlayer extends CharacterMaker{
          this.dice = dice;
    }// end of constructor for my values
    
-      NonPlayer(boolean monster,boolean immortal,String role,double exp,int gold,int dice) {
+      NonPlayer(String Name, int Health, int Mana, boolean monster,boolean immortal,String role,double exp,int gold,int dice) {
+         super(Name, Health, Mana);
          this.immortal = immortal;
          this.role = role;
          this.exp = exp;
@@ -46,9 +48,13 @@ public class NonPlayer extends CharacterMaker{
       }// end rollStats
       
       public void undying(){
-         if(Health <= 0 && immortal == true){
-            Health = 1;
+         if(getHealth() <= 0 && immortal == true){
+            setHealth(1);
          }
       }// end undying
+      
+      public void takeDamage(){
+      
+      }// end takeDamage
    
  }// end NonPlayer class

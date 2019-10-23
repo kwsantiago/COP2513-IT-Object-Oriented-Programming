@@ -61,11 +61,25 @@ public class Playable extends CharacterMaker{
     public int rollStats(){
        int sides = 6;
        int dice = 0;
-       int answer = 0;
+       int min = 7;
+       int sum = 0;
+       int[] a = new int[4];
        for(int i = 0; i < 4; i++){
        dice = (int) (Math.random() * sides) + 1;
+       a[i] = dice;
+       if(min>dice){
+         min=dice;
        }
-       return answer;
+       }
+       for(int i = 0;i<4;i++){
+         if(a[i]==min){
+            min=7;
+            continue;
+         }else{
+            sum += a[i];
+         }
+       }
+         return sum;
       }// end rollStats
       
       public String toString() {

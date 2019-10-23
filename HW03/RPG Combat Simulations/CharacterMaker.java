@@ -22,7 +22,7 @@ public class CharacterMaker {
       this.Name = Name;
    }// end setName
    
-   public double getHealth(){
+   public int getHealth(){
       return Health;
    }// end getHealth
    
@@ -41,9 +41,9 @@ public class CharacterMaker {
    public String toString() {
       String Results =  "Name " + Name + ". \n" +
       "Health " + Health + ". \n" + 
-      "Mana " + Mana + ". \n";
+      "Mana " + Mana;
       
-      //Results += ". \n";
+      Results += ". \n";
       
       return Results;
    }// end of method
