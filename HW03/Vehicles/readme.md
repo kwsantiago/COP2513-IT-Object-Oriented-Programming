@@ -1,2 +1,2 @@
 # Vehicles
-Imagine you are conducting a study on Vehicles. You use object oriented programmingto help you throughout your studies. In the process of studying vehicles, you are to designa class named Vehicles and two subclasses named Cars and Bicycles. 
+Imagine you are conducting a study on Vehicles. You use object oriented programming to help you throughout your studies. In the process of studying vehicles, you are to design a class named Vehicles and two subclasses named Cars and Bicycles. 

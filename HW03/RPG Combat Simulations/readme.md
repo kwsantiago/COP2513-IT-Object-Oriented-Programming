@@ -1,2 +1,2 @@
 # RPG Combat Simulations 
-You are to design a series of calculator classes, Adder, FourFunction, Scientific, andFinancial. FourFunction will be a subclass of Adder, and Scientific and Financial willbe subclasses of FourFunction. 
+Implement a class named CharacterMaker and its two subclasses named Playable and NonPlayer. Also implement a class named Player as a subclass of Playable. 
