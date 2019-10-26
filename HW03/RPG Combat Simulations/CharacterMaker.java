@@ -43,7 +43,7 @@ public class CharacterMaker {
       "Health " + Health + ". \n" + 
       "Mana " + Mana;
       
-      Results += ". \n";
+      Results += " \n";
       
       return Results;
    }// end of method

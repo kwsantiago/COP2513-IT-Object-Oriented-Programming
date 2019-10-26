@@ -15,21 +15,16 @@ public class NonPlayer extends CharacterMaker{
          this.dice = dice;
    }// end of constructor for my values
    
-      NonPlayer(String Name, int Health, int Mana, boolean monster,boolean immortal,String role,double exp,int gold,int dice) {
+      NonPlayer(String Name, int Health, int Mana, boolean monster) {
          super(Name, Health, Mana);
-         this.immortal = immortal;
-         this.role = role;
-         this.exp = exp;
-         this.gold = gold;
-         this.dice = dice;
          if(monster == true){
-            role = "monster";
+            this.role = "monster";
          }else{
-         role = "villager";
+         this.role = "villager";
          }// end if else
-         exp = 1000;
-         gold = 50;
-         immortal = false;
+         this.exp = 1000;
+         this.gold = 50;
+         this.immortal = false;
    }// end of constructor for my values
    
    public double getExp(){
@@ -56,5 +51,16 @@ public class NonPlayer extends CharacterMaker{
       public void takeDamage(){
       
       }// end takeDamage
+      
+      public String toString() {
+            String Results =  "Name " + getName() + ". \n" +
+            "Health " + getHealth() + ". \n" + 
+            "Mana " + getMana() + "\nRole " + role +"\nExp " + exp + "\nGold " +
+            gold;
+      
+            Results += " \n";
+      
+            return Results;
+       }// end of method
    
  }// end NonPlayer class

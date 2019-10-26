@@ -89,7 +89,7 @@ public class Playable extends CharacterMaker{
       "STR: " + STR + ", DEX: " + DEX + ", CON: " + CON +
       ", INT: " + INT + ", WIS: " + WIS + ", CHA: " + CHA;
       
-      Results += ". \n";
+      Results += " \n";
       
       return Results;
    }// end of method

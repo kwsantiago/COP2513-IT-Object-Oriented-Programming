@@ -120,9 +120,13 @@ public class Player extends Playable{
             String Results =  "Name " + getName() + ". \n" +
             "Health " + getHealth() + ". \n" + 
             "Mana " + getMana() + "\nLevel " + getLevel() + "\nProfession " + getProfession()+"\n"+
-            "Skills " + skills;
+            "Skills ";
+            
+            for(int i=0;i<skills.length;i++){
+                  Results += skills[i] + " ";
+                  }  
       
-            Results += ". \n";
+            Results += " \n";
       
             return Results;
        }// end of method
