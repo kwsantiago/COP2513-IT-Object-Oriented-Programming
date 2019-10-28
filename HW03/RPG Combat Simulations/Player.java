@@ -66,16 +66,16 @@ public class Player extends Playable{
           }// end setter
           
           public void gainExp(double x){
-            if(currExp > expRequired){
+            currExp = currExp + x;
+
+            if(currExp >= expRequired){
                gainLevel();
             }
-            else{
-            currExp = currExp + x;
-            }
+
           }// end gainExp
           
           public void gainLevel(){
-            level = level++;
+            level = level + 1;
             currExp = 0;
             expRequired = 2*expRequired;
           }// end gainExp
@@ -90,7 +90,7 @@ public class Player extends Playable{
           public int attack(){
             int a =0;
             a = getSTR() + rollDice() + rollDice() + rollDice();
-            System.out.println("Damage dealt: ");
+            System.out.println(getName() + " Damage dealt: " + a);
             return a;
           }// end attack
           
@@ -103,6 +103,8 @@ public class Player extends Playable{
                int tmp = getHealth();
                setHealth(tmp+a);
             }
+            
+            System.out.println(getHealth());
           }// end defend 
           
           public int castSkill(int a){

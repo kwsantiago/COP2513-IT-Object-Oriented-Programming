@@ -36,11 +36,25 @@ public class NonPlayer extends CharacterMaker{
       }// end getter
       
       private void rollDice(){
-       int sides = 6;
+       int sides = 20;
        int dice = 0;
        int answer = 0;
-       dice = (int) (Math.random() * sides) + 1;
-      }// end rollStats
+       this.dice = (int) (Math.random() * sides) + 1;
+      }// end rollDice
+      
+      public int attack(){
+         rollDice();
+         if(dice==1){
+           dmg = 0;
+         }else if(dice==20){
+            dmg = 5*20;
+         }else{
+            dmg = dice*2;
+         }
+         
+         System.out.println(getName() + " does " + dmg + " damage!!!\n");
+         return dmg;
+      }// end attack
       
       public void undying(){
          if(getHealth() <= 0 && immortal == true){
@@ -48,8 +62,9 @@ public class NonPlayer extends CharacterMaker{
          }
       }// end undying
       
-      public void takeDamage(){
-      
+      public void takeDamage(int a){
+         setHealth(getHealth()-a);
+         undying();
       }// end takeDamage
       
       public String toString() {
