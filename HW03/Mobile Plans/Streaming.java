@@ -26,7 +26,7 @@ public class Streaming extends MobilePlan{
    }// end getMonthlyBill
       
    public String toString() {
-      String Results =  "Class Name: " + "\n" +
+      String Results =  "Class Name: Streaming" + "\n" +
       "Created on: " + dateCreated + "\n" + "Type: " + type + "\n" +
       "Minutes: " + getMinutes() + "\n" + "Data: " + getData() + " GB \n" + "Streaming Data: " + dataStreaming + " GB \n" +
       "SMS: " + getSMS() + "\n" + "Monthly Bill: " + getMonthlyBill() + "\n";

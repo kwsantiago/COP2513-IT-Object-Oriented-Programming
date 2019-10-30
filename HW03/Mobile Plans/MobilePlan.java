@@ -58,7 +58,7 @@ public class MobilePlan {
    }// end getMonthlyBill
       
    public String toString() {
-      String Results =  "Class Name: " + "\n" +
+      String Results =  "Class Name: MobilePlan" + "\n" +
       "Created on: " + dateCreated + "\n" + "Type: " + type + "\n" +
       "Minutes: " + minutes + "\n" + "Data: " + data + " GB \n" +
       "SMS: " + sms + "\n" + "Monthly Bill: " + getMonthlyBill() + "\n";

@@ -26,7 +26,7 @@ public class InternationalLongDistance extends MobilePlan{
    }// end getMonthlyBill
       
    public String toString() {
-      String Results =  "Class Name: " + "\n" +
+      String Results =  "Class Name: InternationalLongDistance" + "\n" +
       "Created on: " + dateCreated+ "\n" + "Type: " + type + "\n" +
       "Minutes: " + getMinutes() + "\n" + "ILD Minutes: " + minsILD + "\n" + "Data: " + getData() + " GB \n" + 
       "SMS: " + getSMS() + "\n" + "Monthly Bill: " + getMonthlyBill() + "\n";
