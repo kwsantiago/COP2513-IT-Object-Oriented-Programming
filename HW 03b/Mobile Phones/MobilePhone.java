@@ -1,14 +1,16 @@
 /**
 * Kyle Santiago 11/01/2019 
 **/
-import java.util.Date;
+import java.util.ArrayList;
 public class MobilePhone {
    public String carrier;
    public String tel_number;
-   //public ArrayList String out_calls;
-   //public ArrayList out_duration;
+   public ArrayList<String> out_calls;
+   public ArrayList<Integer> out_duration;
    
    MobilePhone(String carrier,String tel_number) {
+      out_calls = new ArrayList<String>();
+      out_duration = new ArrayList<Integer>();
       this.carrier = carrier;
       this.tel_number = tel_number;
    }// end of constructor for default values
@@ -29,8 +31,11 @@ public class MobilePhone {
       this.tel_number = tel_number;
    }// end setter
          
-   public void call(){
-      
+   public void call(String tel_number,int min,int sec){
+      int result = 0;
+      result = (sec) + (min*60);
+      out_duration.add(result);
+      out_calls.add(tel_number);
    }// end call
 
 }// end of class
