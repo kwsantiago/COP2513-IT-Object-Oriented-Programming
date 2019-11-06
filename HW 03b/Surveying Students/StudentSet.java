@@ -5,6 +5,6 @@ public class StudentSet{
    private ArrayList<String> favoriteClasses;
    
    StudentSet(ArrayList<String> names, ArrayList<Integer> ages, ArrayList<String> favclasses){
-      StudentSet StudentStatistics = new StudentSet();
+      StudentSet StudentSet = new StudentSet();
    }// end constructor
 }
