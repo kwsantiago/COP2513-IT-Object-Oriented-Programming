@@ -30,16 +30,18 @@ public class SpellBook extends ArrayList<String>{
    
    public void counterSpell(String s1){
       int i;
+      String tmp = "";
       int size = SpellBook.size();
       for(i = 0;i<size;i++){
          if(SpellBook.get(i)==s1){
             System.out.println("turn to page " + i);
-            for(int j = SpellBook.get(i).length();j>=0;i--){
-            System.out.print(SpellBook.get(i).charAt(j));
-            }
+            tmp = SpellBook.get(i);
             break;
             }
       }// end for
+      for(int n = tmp.length()-1; n>=0;n--){
+         System.out.print(tmp.charAt(n));
+      }
       System.out.println("dodge");
    }// end counterSpell
    
@@ -51,8 +53,8 @@ public class SpellBook extends ArrayList<String>{
    }// end inventSpell
    
    public String castSpell(){
-      int r = random.nextInt(SpellBook.size());
-      return SpellBook.get(r - 1);
+      int r = random.nextInt(SpellBook.size()-1);
+      return SpellBook.get(r);
    }// end castSpell
    
    public void forgetSpell(String s1){
