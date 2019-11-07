@@ -49,7 +49,9 @@ public class Gymnast{
    }// end calculateTotalScore */
    
    public String display(){
-      return "Name: " + firstName + " " + lastName + "\nScore1: " + scores.get(0);
+      return "Name: " + firstName + " " + lastName + "\nScore1: " + scores.get(0) + "\nScore2: " + scores.get(1)+
+      "\nScore3: " + scores.get(2) + "\nScore4: " + scores.get(3) + "\nScore5: " + scores.get(4) + "\nScore6: " + scores.get(5) +
+      "\nScore7: " + scores.get(6) + "\nScore8: " + scores.get(7) + "\n";
    }// end display
 
 }// end class
