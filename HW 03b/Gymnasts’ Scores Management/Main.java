@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 public class Main{
    public static void main(String[] args){
       ArrayList<Double> g1Skills;
@@ -67,15 +67,31 @@ public class Main{
       System.out.println(g5.display());
       
       Gymnast g6 = new Gymnast();
-      ArrayList<Double> g6Skills;
-      g6Skills = new ArrayList<Double>();
-      g6Skills.add(9.2);
-      g6Skills.add(9.3);
-      g6Skills.add(9.3);
-      g6Skills.add(9.7);
-      g6Skills.add(9.2);
-      g6Skills.add(9.2);
-      g6.SetScores(g6Skills);
-      System.out.println(g6.display());
+      g6.setFirstName("Jamal");
+      g6.setLastName("Evans");
+      ArrayList<Double> g6Scores;
+      g6Scores = new ArrayList<Double>();
+      g6Scores.add(9.2);
+      g6Scores.add(9.3);
+      g6Scores.add(9.3);
+      g6Scores.add(9.7);
+      g6Scores.add(9.2);
+      g6Scores.add(9.2);
+      g6.setScores(g6Scores);
+      g6.addScore(9.6);
+      g6.addScore(9.8);
+      System.out.println(g6.display()); 
+      
+      ArrayList<Double> rank;
+      rank = new ArrayList<Double>();
+      rank.add(g1.calculateTotalScore());
+      rank.add(g2.calculateTotalScore());
+      rank.add(g3.calculateTotalScore());
+      rank.add(g4.calculateTotalScore());
+      rank.add(g5.calculateTotalScore());
+      rank.add(g6.calculateTotalScore());
+      Collections.sort(rank, Collections.reverseOrder());
+      System.out.println("Total Score Rank:\nRank 1 = " + rank.get(0) + "\nRank 2 = " + rank.get(1) + "\nRank 3 = " + rank.get(2) + "\nRank 4 = " + rank.get(3) +
+      "\nRank 5 = " + rank.get(4) + "\nRank 6 = " + rank.get(5) + "\n");
    }// end main
 }// end class

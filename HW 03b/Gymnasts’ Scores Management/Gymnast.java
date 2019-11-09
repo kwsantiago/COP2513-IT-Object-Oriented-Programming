@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*; 
 public class Gymnast{
    private String firstName;
    private String lastName;
@@ -44,14 +44,21 @@ public class Gymnast{
       scores.add(score);
    }// end addScore
    
-   /*public calculateTotalScore(){
-      
-   }// end calculateTotalScore */
+   public double calculateTotalScore(){
+      double sum = 0;
+      Collections.sort(scores);
+      scores.remove(0);
+      scores.remove(scores.size()-1);
+      for(int i = 0; i<scores.size();i++){
+         sum += scores.get(i);
+      }
+      return sum;
+   }// end calculateTotalScore 
    
    public String display(){
       return "Name: " + firstName + " " + lastName + "\nScore1: " + scores.get(0) + "\nScore2: " + scores.get(1)+
       "\nScore3: " + scores.get(2) + "\nScore4: " + scores.get(3) + "\nScore5: " + scores.get(4) + "\nScore6: " + scores.get(5) +
-      "\nScore7: " + scores.get(6) + "\nScore8: " + scores.get(7) + "\n";
+      "\nScore7: " + scores.get(6) + "\nScore8: " + scores.get(7) + "\nFinal Score: " + calculateTotalScore() + "\n";
    }// end display
 
 }// end class
