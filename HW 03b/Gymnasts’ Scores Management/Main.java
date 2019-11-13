@@ -56,7 +56,7 @@ public class Main{
       ArrayList<Double> g5Skills;
       g5Skills = new ArrayList<Double>();
       g5Skills.add(9.2);
-      g5Skills.add(9.2);
+      g5Skills.add(9.1);
       g5Skills.add(9.2);
       g5Skills.add(9.9);
       g5Skills.add(9.5);
