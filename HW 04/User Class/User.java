@@ -7,11 +7,11 @@ public class User{
   private String phoneNum;
   
   User(){
-    firstName = "";
-    lastName = "";
+    firstName = " ";
+    lastName = " ";
     age = 21;
-    userID = "";
-    phoneNum = "";
+    userID = " ";
+    phoneNum = " ";
   }// end no-arg constructor
   
   User(String firstName, String lastName, int age, String userID, String phoneNum){
@@ -24,6 +24,11 @@ public class User{
     if(phoneNum.length() > 10){
       throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
     }
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.userID = userID;
+    this.phoneNum = phoneNum;
   }// end constructor
   
   public String getFirstName(){
