@@ -22,13 +22,14 @@ public class SimpleJSONEditor{
    
    // finish stuff here // INCOMPLETE STUFF HERE
    
-   public toString(){
+   public String toString(){
       for(int i = 0; i<labels.size(); i++){
          System.out.println(labels.get(i));
          }
       for(int i = 0; i<values.size(); i++){
          System.out.println(values.get(i));
          }
+       return "";
    }// end toString
    
 }// end class
