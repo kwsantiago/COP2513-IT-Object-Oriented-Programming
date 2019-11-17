@@ -16,13 +16,13 @@ public class User{
   
   User(String firstName, String lastName, int age, String userID, String phoneNum){
     if(age < 0 || age > 99){
-      throw ArithmeticExpression("Age must be between 0 and 99.");
+      throw new ArithmeticException("Age must be between 0 and 99.");
     }
-    if(userID.length < 8 //add at least one number here){
-      throw ArithmeticExpression("Invalid user ID.");
+    if(userID.length() < 8 /*add at least one number here*/){
+      throw new ArithmeticException("Invalid user ID.");
     }
-    if(phoneNum.length > 10){
-      throw ArithmeticExpression("Phone number cannot be longer than 10 digits.");
+    if(phoneNum.length() > 10){
+      throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
     }
   }// end constructor
   
@@ -44,52 +44,51 @@ public class User{
   
   public int getAge(){
   if(age < 0 || age > 99){
-      throw ArithmeticExpression("Age must be between 0 and 99.");
+      throw new ArithmeticException("Age must be between 0 and 99.");
     }
     return age;
   }// end getter
   
   public void setAge(int age){
   if(age < 0 || age > 99){
-      throw ArithmeticExpression("Age must be between 0 and 99.");
+      throw new ArithmeticException("Age must be between 0 and 99.");
     }
     this.age = age;
   }// end setter
   
   public String getUserID(){
-  if(userID.length < 8 //add at least one number here){
-      throw ArithmeticExpression("Invalid user ID.");
+  if(userID.length() < 8 /*add at least one number here*/){
+      throw new ArithmeticException("Invalid user ID.");
     }
     return userID;
   }// end getter
   
   public void setUserID(String userID){
-  if(userID.length < 8 //add at least one number here){
-      throw ArithmeticExpression("Invalid user ID.");
+  if(userID.length() < 8 /*add at least one number here*/){
+      throw new ArithmeticException("Invalid user ID.");
     }
     this.userID = userID;
   }// end setter
   
   public String getPhoneNum(){
-  if(phoneNum.length > 10){
-      throw ArithmeticExpression("Phone number cannot be longer than 10 digits.");
+  if(phoneNum.length() > 10){
+      throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
     }
     return phoneNum;
   }// end getter
   
   public void setPhoneNum(String phoneNum){
-  if(phoneNum.length > 10){
-      throw ArithmeticExpression("Phone number cannot be longer than 10 digits.");
+  if(phoneNum.length() > 10){
+      throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
     }
     this.phoneNum = phoneNum;
   }// end setter
   
-  public boolean isValidUserID(Sting userID){
-  if(userID.length < 8 //add at least one number here){
+  public boolean isValidUserID(String userID){
+  if(userID.length() < 8 /*add at least one number here*/){
       return true;
     }else{
-    throw ArithmeticExpression("Invalid user ID.");
-    return false;
+    throw new ArithmeticException("Invalid user ID.");
     }
   }// end isValidUserID
   
@@ -97,15 +96,15 @@ public class User{
     //fix this
   }// end deconstructPhone
   
-  public String display()[
+  public String display(){
     return "Name: " + firstName + " " + lastName +
     "\nAge: " + age + "\nUserID: " + userID +
     "\nPhone Number: " + phoneNum +
     "\nArea Code: " + "" +
-    "\nPhone: " + phonenum + "\n";
+    "\nPhone: " + phoneNum + "\n";
   }// end display
   
-  public static void main(String args[]){
+  public static void main(String args[]){// was told on email that User 1 and 3 are no-arg
     User user1 = new User();
     user1.setFirstName("Sarah");
     user1.setLastName("Holt");
@@ -114,7 +113,11 @@ public class User{
     System.out.println(user1.display());
     User user2 = new User("Kevin", "James", 25, "kjames2552", "8019023100");
     System.out.println(user2.display());
-    User user2 = new User("Dante", "Couto", 25, "dantetezza", "95000");
+    User user3 = new User();
+    user3.setFirstName("Dante");
+    user3.setLastName("Couto");
+    user3.setUserID("dantetezza");
+    user3.setPhoneNum("95000");
     System.out.println(user3.display());
   }// end main
   
