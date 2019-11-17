@@ -7,11 +7,11 @@ public class User{
   private String phoneNum;
   
   User(){
-    firstName = " ";
-    lastName = " ";
+    firstName = "";
+    lastName = "";
     age = 21;
-    userID = " ";
-    phoneNum = " ";
+    userID = "";
+    phoneNum = "";
   }// end no-arg constructor
   
   User(String firstName, String lastName, int age, String userID, String phoneNum){
@@ -62,14 +62,26 @@ public class User{
   }// end setter
   
   public String getUserID(){
-  if(userID.length() < 8 /*add at least one number here*/){
+  int count = 0;
+  for(int i = 0; i<userID.length();i++){
+  char ch = userID.charAt(i);
+   if(Character.isDigit(ch) == true)
+   count++;
+  }
+  if(userID.length() < 8 || count == 0){  
       throw new ArithmeticException("Invalid user ID.");
     }
     return userID;
   }// end getter
   
   public void setUserID(String userID){
-  if(userID.length() < 8 /*add at least one number here*/){
+  int count = 0;
+  for(int i = 0; i<userID.length();i++){
+  char ch = userID.charAt(i);
+   if(Character.isDigit(ch) == true)
+   count++;
+  }
+  if(userID.length() < 8 || count == 0){  
       throw new ArithmeticException("Invalid user ID.");
     }
     this.userID = userID;
@@ -90,23 +102,29 @@ public class User{
   }// end setter
   
   public boolean isValidUserID(String userID){
-  if(userID.length() < 8 /*add at least one number here*/){
-      return true;
-    }else{
-    throw new ArithmeticException("Invalid user ID.");
+  boolean isValid = true;
+  int count = 0;
+  for(int i = 0; i<userID.length();i++){
+  char ch = userID.charAt(i);
+   if(Character.isDigit(ch) == true)
+   count++;
+  }
+  if(userID.length() < 8 || count == 0){  
+      isValid = false;
+      throw new ArithmeticException("Invalid user ID.");
     }
+    return isValid;
   }// end isValidUserID
   
-  public void deconstructPhone(){
-    //fix this
+  public String deconstructPhone(){
+    return "\nArea Code: " + phoneNum.substring(0,3) + 
+    "\nPhone Number: " + phoneNum.substring(3,phoneNum.length());
   }// end deconstructPhone
   
   public String display(){
     return "Name: " + firstName + " " + lastName +
     "\nAge: " + age + "\nUserID: " + userID +
-    "\nPhone Number: " + phoneNum +
-    "\nArea Code: " + "" +
-    "\nPhone: " + phoneNum + "\n";
+    "\nPhone Number: " + phoneNum + deconstructPhone() + "\n";
   }// end display
   
   public static void main(String args[]){// was told on email that User 1 and 3 are no-arg
