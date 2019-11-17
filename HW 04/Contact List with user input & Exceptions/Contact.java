@@ -10,6 +10,10 @@ public class Contact{
       this.tel_number = tel_number;
    }// end constructor
    
+   public String getLastName(){
+      return lastName;
+   }// end getLastName
+   
    public String toString(){
       return "Full Name: " + firstName + " " + lastName +
       "\nPhone #: " + tel_number;
@@ -19,6 +23,8 @@ public class Contact{
       return this.lastName.equals(lastName);
    }// end Boolean
    
-   //getContact here
+   /*public Object getContact(){
+      return Contact;
+   }// end getContact */
    
 }// end class

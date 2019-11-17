@@ -29,7 +29,7 @@ public class ContactList{
    
    public void search(String LastName){
       for(int i = 0; i<contacts.size(); i++){
-       if(LastName == lastName){
+       if(LastName == getLastName()){
          System.out.println(contacts.get(i));  
        }
       }
