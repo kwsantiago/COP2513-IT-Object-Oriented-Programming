@@ -117,14 +117,14 @@ public class User{
   }// end isValidUserID
   
   public String deconstructPhone(){
-    return "\nArea Code: " + phoneNum.substring(0,3) + 
+    return "Area Code: " + phoneNum.substring(0,3) + 
     "\nPhone Number: " + phoneNum.substring(3,phoneNum.length());
   }// end deconstructPhone
   
   public String display(){
     return "Name: " + firstName + " " + lastName +
     "\nAge: " + age + "\nUserID: " + userID +
-    "\nPhone Number: " + phoneNum + deconstructPhone() + "\n";
+    "\nPhone Number: " + phoneNum + "\n" + deconstructPhone() + "\n";
   }// end display
   
   public static void main(String args[]){// was told on email that User 1 and 3 are no-arg
