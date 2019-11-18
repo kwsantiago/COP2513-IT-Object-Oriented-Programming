@@ -15,11 +15,17 @@ public class User{
   }// end no-arg constructor
   
   User(String firstName, String lastName, int age, String userID, String phoneNum){
+    int count = 0;
+  for(int i = 0; i<userID.length();i++){
+  char ch = userID.charAt(i);
+   if(Character.isDigit(ch) == true)
+   count++;
+  }
+  if(userID.length() < 8 || count == 0){  
+      throw new ArithmeticException("Invalid user ID.");
+    }
     if(age < 0 || age > 99){
       throw new ArithmeticException("Age must be between 0 and 99.");
-    }
-    if(userID.length() < 8 /*add at least one number here*/){
-      throw new ArithmeticException("Invalid user ID.");
     }
     if(phoneNum.length() > 10){
       throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
