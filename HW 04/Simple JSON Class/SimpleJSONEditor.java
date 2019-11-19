@@ -20,16 +20,30 @@ public class SimpleJSONEditor{
       return values.get(label1);
    }// end getValueLabeled
    
-   // finish stuff here // INCOMPLETE STUFF HERE
+   public void setValueLabeled(String label, int value){
+   int label1 = 0;
+      for(int i = 0; i<labels.size(); i++){
+         if(labels.get(i) == label){
+            label1 = labels.indexOf(i);
+         }
+      }
+      values.set(label1,value);
+   }// end setValueLabeled
+   
+   public void writeJSON(String fpath){
+      String tmp = toString();
+      BufferedWriter writer = new BufferedWriter(new FileWriter(output));
+      writer.write(tmp);
+      
+      writer.close();
+   }// end 
    
    public String toString(){
+      String tmp = "";
       for(int i = 0; i<labels.size(); i++){
-         System.out.println(labels.get(i));
+         tmp += labels.get(i) + ": " + values.get(i);
          }
-      for(int i = 0; i<values.size(); i++){
-         System.out.println(values.get(i));
-         }
-       return "";
+       return tmp;
    }// end toString
    
 }// end class
