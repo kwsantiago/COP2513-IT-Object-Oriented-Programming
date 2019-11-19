@@ -33,4 +33,29 @@ public class SpellException{
       }
       this.mana = mana;
    }// end setter
+   
+   public String getSpell(){
+      int i = (int)Math.random() * spells.length;
+      return spells[i];
+   }// end getSpell
+   
+   public String getSpell(int i){
+      if(i < 0 || i > spells.length){
+         throw new ArithmeticException("Must be inside Spells array.");
+      }
+      return spells[i];
+   }// end getSpell overload
+   
+   public void addSpell(String spell, int dmg, int mana){
+      for(int i = 0; i<spells.length; i++){
+         if(spells[i] == ""){
+            // INCOMPLETE
+         }
+      }
+   }// end addSpell
+   
+   public void removeSpell(){
+      int i = (int)Math.random() * spells.length;
+      spells[i] = ""; //INCOMPLETE
+   }// end removeSpell
 }// end class
