@@ -22,13 +22,13 @@ public class User{
    count++;
   }
   if(userID.length() < 8 || count == 0){  
-      throw new ArithmeticException("Invalid user ID.");
+      throw new ArrayIndexOutOfBoundsException("Invalid user ID.");
     }
     if(age < 0 || age > 99){
-      throw new ArithmeticException("Age must be between 0 and 99.");
+      throw new ArrayIndexOutOfBoundsException("Age must be between 0 and 99.");
     }
     if(phoneNum.length() > 10){
-      throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
+      throw new ArrayIndexOutOfBoundsException("Phone number cannot be longer than 10 digits.");
     }
     this.firstName = firstName;
     this.lastName = lastName;
@@ -55,14 +55,14 @@ public class User{
   
   public int getAge(){
   if(age < 0 || age > 99){
-      throw new ArithmeticException("Age must be between 0 and 99.");
+      throw new ArrayIndexOutOfBoundsException("Age must be between 0 and 99.");
     }
     return age;
   }// end getter
   
   public void setAge(int age){
   if(age < 0 || age > 99){
-      throw new ArithmeticException("Age must be between 0 and 99.");
+      throw new ArrayIndexOutOfBoundsException("Age must be between 0 and 99.");
     }
     this.age = age;
   }// end setter
@@ -75,7 +75,7 @@ public class User{
    count++;
   }
   if(userID.length() < 8 || count == 0){  
-      throw new ArithmeticException("Invalid user ID.");
+      throw new ArrayIndexOutOfBoundsException("Invalid user ID.");
     }
     return userID;
   }// end getter
@@ -88,21 +88,21 @@ public class User{
    count++;
   }
   if(userID.length() < 8 || count == 0){  
-      throw new ArithmeticException("Invalid user ID.");
+      throw new ArrayIndexOutOfBoundsException("Invalid user ID.");
     }
     this.userID = userID;
   }// end setter
   
   public String getPhoneNum(){
   if(phoneNum.length() > 10){
-      throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
+      throw new ArrayIndexOutOfBoundsException("Phone number cannot be longer than 10 digits.");
     }
     return phoneNum;
   }// end getter
   
   public void setPhoneNum(String phoneNum){
   if(phoneNum.length() > 10){
-      throw new ArithmeticException("Phone number cannot be longer than 10 digits.");
+      throw new ArrayIndexOutOfBoundsException("Phone number cannot be longer than 10 digits.");
     }
     this.phoneNum = phoneNum;
   }// end setter
