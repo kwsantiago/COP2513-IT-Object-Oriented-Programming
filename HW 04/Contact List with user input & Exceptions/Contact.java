@@ -23,8 +23,8 @@ public class Contact{
       return this.lastName.equals(lastName);
    }// end Boolean
    
-   /*public Object getContact(){
+   public Object getContact(){
       return Contact;
-   }// end getContact */
+   }// end getContact 
    
 }// end class

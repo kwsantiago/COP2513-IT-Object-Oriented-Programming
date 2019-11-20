@@ -9,14 +9,14 @@ public class ContactList{
    }// end no-arg constructor
    
    public boolean full(){
-      if(contacts.size() == 5){
+      if(contacts.size() == size){
          return true;
       }else{
       return false;
       }
    }// end full
    
-   public boolean add(Contact obj){
+   public void add(Contact obj){// not sure why it's supposed to be boolean
       contacts.add(obj);
       size ++;
    }// end add
@@ -29,7 +29,7 @@ public class ContactList{
    
    public void search(String LastName){
       for(int i = 0; i<contacts.size(); i++){
-       if(LastName == getLastName()){
+       if(LastName == contacts.get(i).getLastName()){
          System.out.println(contacts.get(i));  
        }
       }
@@ -38,7 +38,7 @@ public class ContactList{
    public int searchNumMatches(String LastName){
       int count = 0;
       for(int i = 0; i<contacts.size(); i++){
-       if(LastName == lastName){
+       if(LastName == contacts.get(i).getLastName()){
          count++;  
        }
       }
