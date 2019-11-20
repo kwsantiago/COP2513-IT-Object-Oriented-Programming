@@ -87,21 +87,21 @@ public class User{
    if(Character.isDigit(ch) == true)
    count++;
   }
-  if(userID.length() < 8 || count == 0){  
+  if(userID.length() < 8 || count == 0){ 
       throw new ArrayIndexOutOfBoundsException("Invalid user ID.");
     }
     this.userID = userID;
   }// end setter
   
   public String getPhoneNum(){
-  if(phoneNum.length() > 10){
+  if(phoneNum.length() > 10){ 
       throw new ArrayIndexOutOfBoundsException("Phone number cannot be longer than 10 digits.");
     }
     return phoneNum;
   }// end getter
   
   public void setPhoneNum(String phoneNum){
-  if(phoneNum.length() > 10){
+  if(phoneNum.length() > 10){ 
       throw new ArrayIndexOutOfBoundsException("Phone number cannot be longer than 10 digits.");
     }
     this.phoneNum = phoneNum;
