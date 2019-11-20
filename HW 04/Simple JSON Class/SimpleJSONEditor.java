@@ -32,10 +32,10 @@ public class SimpleJSONEditor{
    
    public void writeJSON(String fpath){
       String tmp = toString();
-      BufferedWriter writer = new BufferedWriter(new FileWriter(output));
-      writer.write(tmp);
-      
+      PrintWriter writer = new PrintWriter(fpath);
+      writer.println(tmp);
       writer.close();
+      //INCOMPLETE
    }// end 
    
    public String toString(){
@@ -45,5 +45,12 @@ public class SimpleJSONEditor{
          }
        return tmp;
    }// end toString
+   
+   public static void main(String args[]){
+      SimpleJSONEditor example = new SimpleJSONEditor("fruits.json",0);
+      System.out.println(example.getValueLabeled("oranges"));
+      example.setValueLabeled("apples",12);
+      
+   }// end main
    
 }// end class
