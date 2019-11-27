@@ -19,6 +19,7 @@ public class SpellException{
       spellDamage = new ArrayList<Integer>();
       spellCost = new ArrayList<Integer>();
       this.mana = mana;
+      this.spells = spells;
       this.spellDamage = spellDamage;
       this.spellCost = spellCost;
    }// end constructor
