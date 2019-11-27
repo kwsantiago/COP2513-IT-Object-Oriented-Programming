@@ -1,4 +1,7 @@
 import java.util.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import org.json.simple.JSONObject;
 public class SimpleJSONEditor{
    ArrayList<String> labels;
    ArrayList<Integer> values;
@@ -32,10 +35,15 @@ public class SimpleJSONEditor{
    
    public void writeJSON(String fpath){
       String tmp = toString();
-      PrintWriter writer = new PrintWriter(fpath);
-      writer.println(tmp);
-      writer.close();
-      //INCOMPLETE
+      try{
+         FileWriter file = new FileWriter("D:/kyles/Git/COP2513-IT-Object-Oriented-Programming-2019/HW 04/Simple JSON Class/fruits.json");
+         file.write(fpath.toJSONString());
+         file.close();
+      }
+      catch (IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
    }// end 
    
    public String toString(){
@@ -50,7 +58,8 @@ public class SimpleJSONEditor{
       SimpleJSONEditor example = new SimpleJSONEditor("fruits.json",0);
       System.out.println(example.getValueLabeled("oranges"));
       example.setValueLabeled("apples",12);
-      
+      example.setValueLabeled("peaches",2);
+      example.writeJSON("fruits2.json");
    }// end main
    
 }// end class
