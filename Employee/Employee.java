@@ -11,6 +11,14 @@ public class Employee{
     this.name = name;
   }// end constructor
   
+  public String getName(){
+    return name;
+  }// end getter
+  
+  public void setName(String name){
+    this.name = name;
+  }// end setter
+  
   public String toString(){
     return "Employee name: " + name;
   }// end toString
