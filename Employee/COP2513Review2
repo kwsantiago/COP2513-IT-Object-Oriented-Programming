@@ -1,0 +1,13 @@
+import java.util.*;
+import java.io.*;
+public class COP2513Review2{
+  EmployeeDataStore object1 = new EmployeeDataStore();
+  
+  Employee add1 = new Employee("John Doe");
+  CloneableEmployee add2 = new CloneableEmployee("Jeffrey Eihler");
+  
+  object1.add(add1);
+  object1.add(add2);
+  
+  object1.validate();
+}// end class
