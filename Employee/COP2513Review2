@@ -1,13 +1,45 @@
 import java.util.*;
 import java.io.*;
 public class COP2513Review2{
+  public static void main(String args[]){
   EmployeeDataStore object1 = new EmployeeDataStore();
   
-  Employee add1 = new Employee("John Doe");
-  CloneableEmployee add2 = new CloneableEmployee("Jeffrey Eihler");
-  
-  object1.add(add1);
-  object1.add(add2);
+  object1.add(new Employee("Wesley"));
+  object1.add(new Employee("John"));
+  object1.add(new CloneableEmployee("Donko"));
+  object1.add(new CloneableEmployee("Einder"));
   
   object1.validate();
+  
+  }// end main
+  
+  class EmployeeDataStore extends ArrayList<Employee>{
+  
+  }// end EmployeeDataStore
+  
+  class Employee {
+    public String name;
+    
+    public Employee(){
+      name = "";
+    }// end no-arg constructor
+    
+    public Employee(){
+      this.name = name;
+    }// end constructor
+    
+    public String toString(){
+      return "<" + name + ">";
+    }// end toString
+  }// end Employee
+  
+  class CloneableEmployee extends Employee implements Cloneable{
+    public CloneableEmployee(){
+      super();
+    }
+  
+    public CloneableEmployee(String name){
+      super(name);
+    }
+  }// end CloneableEmployee
 }// end class
