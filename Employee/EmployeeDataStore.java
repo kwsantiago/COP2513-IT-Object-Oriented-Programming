@@ -5,4 +5,8 @@ public class EmployeeDataStore extends ArrayList<Employee>{
     
   }// end validate
   
+  public void clone(){
+    
+  }// end clone
+  
 }// end class
