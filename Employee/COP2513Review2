@@ -9,13 +9,37 @@ public class COP2513Review2{
   object1.add(new CloneableEmployee("Donko"));
   object1.add(new CloneableEmployee("Einder"));
   
-  object1.validate();
+  try{
+    object1.validate();
+  }catch(EmployeeNotCloneableExeption e){
+    System.out.println(e);
+  }
+  
+  System.out.println(object1);
   
   }// end main
   
   class EmployeeDataStore extends ArrayList<Employee>{
-  
+    public void validate() throws EmployeeNotCloneableExeption{
+      for(Employee e : this)
+        if(!(e instanceof Cloneable))
+          throw new EmployeeNotCloneableExeption("One of the employees is not cloneable.");
+    }// end validate
+    
+    public Object clone(){
+      EmployeeDataStore copy = new EmployeeDataStore();
+      for(Employee e : this)
+        if(e instanceof Cloneable)
+          copy.add((Employee)e.clone)); // ALWAYS ADD EMPOYEE FOR DOWNCASTING WHEN USING CLONE
+      return copy;
+    }// end clone
   }// end EmployeeDataStore
+  
+  class EmployeeNotCloneableExeption extends Exception{
+    public EmployeeNotCloneableExeption(String msg){
+      super(msg);
+    }
+  }// end EmployeeNotCloneableExeption ||||  MAKING CUSTOM EXCEPTIONS WILL NOT BE IN FINAL
   
   class Employee {
     public String name;
@@ -41,5 +65,9 @@ public class COP2513Review2{
     public CloneableEmployee(String name){
       super(name);
     }
+    
+    public String toString(){
+      return super.toString().toUpperCase();
+    }// end toString
   }// end CloneableEmployee
 }// end class
