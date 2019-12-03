@@ -20,6 +20,6 @@ public class Employee{
   }// end setter
   
   public String toString(){
-    return "Employee name: " + name;
+    return name;
   }// end toString
 }// end class
