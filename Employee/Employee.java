@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 public class Employee{
-  String name;
+  private String name;
   
   Employee(){
     name = "";
