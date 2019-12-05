@@ -4,10 +4,10 @@ public class Video extends Medium{
    private String director;
    
    Video(){
-      setTitle("");
-      setAuthor("");
-      director = "";
-      duration = 0;
+       setTitle("");
+       setAuthor("");
+       director = "";
+       duration = 0;
    }// end no-arg constructor
    
    Video(String title, String author, int duration, String director){

@@ -4,8 +4,7 @@ public class Medium{
    private String author;
    
    Medium(){
-      title = "";
-      author = "";
+      this("","");
    }// end no-arg constructor
    
    Medium(String title, String author){
