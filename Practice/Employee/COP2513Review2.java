@@ -9,9 +9,7 @@ public class COP2513Review2{
       s.add(new CloneableEmployee("Wako"));
       s.add(new CloneableEmployee("Lonko"));
       
-      System.out.println("Displaying the data store's contents:\n" + s);
-      
-      EmployeeDataStore copy = (EmployeeDataStore)(s.clone());
+      System.out.println(s);
       
       try{
       s.validate();
