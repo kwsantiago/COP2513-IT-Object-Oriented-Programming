@@ -4,10 +4,7 @@ public class Book extends Medium{
    private boolean isDigital;
    
    Book(){
-      setTitle("");
-      setAuthor("");
-      length = 0;
-      isDigital = false;
+      this("","",0,false);
    }// end no-arg constructor
    
    Book(String title, String author, int length, boolean isDigital){
