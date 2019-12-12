@@ -1,16 +1,23 @@
 import java.util.*;
-import java.io.FileWriter;
-import java.io.IOException;
-import org.json.simple.JSONObject;
+import java.io.*;
 public class SimpleJSONEditor{
+   String fileName;
+   File file;
    ArrayList<String> labels;
    ArrayList<Integer> values;
    
-   SimpleJSONEditor(String fPath, int fNumber){
-      labels = new ArrayList<String>();
-      values = new ArrayList<Integer>();
-      labels.add(fPath);
-      values.add(fNumber);
+   SimpleJSONEditor(){
+      this("default.txt");
+      this.file = new File("default-file.txt");
+      this.labels = new ArrayList<String>();
+      this.values = new ArrayList<Integer>();
+   }// end no-arg constructor
+   
+   SimpleJSONEditor(String fileName){
+      this.labels = new ArrayList<String>();
+      this.values = new ArrayList<Integer>();
+      this.fileName = fileName;
+      this.file = new File(this.fileName);
    }// end constructor
    
    public int getValueLabeled(String label){
@@ -33,33 +40,38 @@ public class SimpleJSONEditor{
       values.set(label1,value);
    }// end setValueLabeled
    
-   public void writeJSON(String fpath){
-      String tmp = toString();
-      try{
-         FileWriter file = new FileWriter("D:/kyles/Git/COP2513-IT-Object-Oriented-Programming-2019/HW 04/Simple JSON Class/fruits.json");
-         file.write(fpath.toJSONString());
-         file.close();
+   public void writeJSON(String fileName) throws FileNotFoundException{
+      if(file.exists())
+         throw new FileNotFoundException("FileNotFoundException");
+      try(PrintWriter pw = new PrintWriter(this.file)){
+         if(!file.canWrite())
+            throw new FileNotFoundException("FileNotFoundException");
+         for(String d: labels){
+            pw.println(d);
+            }
+         for(Integer a: values){
+            pw.println(a);
+            }
+      }catch(FileNotFoundException e){
+         throw new FileNotFoundException("FileNotFoundException");
       }
-      catch (IOException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
-   }// end 
+   }// end writeJSON
    
    public String toString(){
       String tmp = "";
       for(int i = 0; i<labels.size(); i++){
-         tmp += labels.get(i) + ": " + values.get(i);
+         tmp += labels.get(i) + " : " + values.get(i);
          }
        return tmp;
    }// end toString
    
    public static void main(String args[]){
-      SimpleJSONEditor example = new SimpleJSONEditor("fruits.json",0);
-      System.out.println(example.getValueLabeled("oranges"));
-      example.setValueLabeled("apples",12);
-      example.setValueLabeled("peaches",2);
-      example.writeJSON("fruits2.json");
+      SimpleJSONEditor object1 = new SimpleJSONEditor("fruits.json");
+      try{
+         object1.getValueLabeled("apples");
+      }catch(IndexOutOfBoundsException e){
+         System.out.println(e);
+         }
    }// end main
    
 }// end class
