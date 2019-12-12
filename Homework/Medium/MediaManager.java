@@ -24,9 +24,11 @@ public class MediaManager{
    ArrayList<Medium> everything = new ArrayList<Medium>();
    for(int i = 0; i<allVideos.size(); i++){
       everything.add(allVideos.get(i));
+      System.out.println(everything.get(i));
    }
    for(int i = 0; i<allBooks.size(); i++){
       everything.add(allBooks.get(i));
+      System.out.println(everything.get(i));
    }
    for(int i = 0; i<everything.size(); i++){
       System.out.println(everything.get(i));
