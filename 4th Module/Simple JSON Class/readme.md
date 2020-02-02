@@ -1,4 +1,4 @@
-#Simple JSON Class 
+# Simple JSON Class 
 
 In many java applications values can be stored in a file format called JSON which is just a txt file with
 some simple rules. Regular JSON has a lot of useful features and types of data, but for this assignment we
