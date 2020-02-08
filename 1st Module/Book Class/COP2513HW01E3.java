@@ -1,7 +1,7 @@
 /**
 * This is our COP2513 template
 * Kyle Santiago 9/23/2019
-* Exercise #3 – Book Class 
+* Exercise #3 ï¿½ Book Class 
 **/
 import java.util.Scanner; // Scanner is in the java.util package
 public class COP2513HW01E3 {
@@ -32,7 +32,7 @@ public class COP2513HW01E3 {
    public String toString() {
    
    String Results = "The name of the book is " + title + ". \n" +
-      "The authpr of the book is " + author + ". \n" +
+      "The author of the book is " + author + ". \n" +
       "The year of the book is " + year + ". \n" +
       "The status of the book is ";
       
